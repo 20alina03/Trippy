@@ -1,0 +1,84 @@
+.footer {
+    padding: 4rem 6rem;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+/* Fix typo: 'text-aligh' -> 'text-align' */
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+}
+
+.top i {
+    color: white;
+    font-size: 2rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.top i:hover {
+    color: rgb(0, 147, 147);
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+/* Ensure each bottom section stacks content vertically */
+.bottom div {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px; /* prevent squishing on wide screens */
+}
+
+.bottom h4 {
+    font-size: 1.3rem;
+    padding: 1rem 0 0.8rem 0;
+}
+
+.bottom a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    padding-bottom: 0.4rem;
+}
+
+.bottom a:hover {
+    color: rgb(0, 147, 147);
+}
+
+/* ✅ Responsive layout for screens <= 850px */
+@media screen and (max-width: 850px) {
+    .footer {
+        padding: 2rem;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .top i {
+        margin-left: 0;
+        margin-right: 1rem;
+    }
+
+    .bottom {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .bottom div {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}
